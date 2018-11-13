@@ -17,7 +17,6 @@ class UsersController < ApplicationController
         redirect_to "/sport_selection"
       end
 
-
     end
 
     def update

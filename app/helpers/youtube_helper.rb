@@ -5,12 +5,41 @@ module YoutubeHelper
 
   def you_tube_search
 
-# "UCbcxFkd6B9xUU54InHv4Tig", "UCLbW1klIl3T1XCp8hHYZGMw", "UCKwGZZMrhNYKzucCtTPY2Nw", "UCB_qr75-ydFVKSF9Dmo6izg"
-      @search_array = ["UCYN6dfKAmlMBRd-thhEzsBg"]
+      @find_array = [" ", "Football", "Tennis", "Rugby", "Golf", "Formula 1"]
 
-      for @i in 0..@search_array.length-1
+    @search_array = [" ","UCYN6dfKAmlMBRd-thhEzsBg", "UCbcxFkd6B9xUU54InHv4Tig", "UCLbW1klIl3T1XCp8hHYZGMw", "UCKwGZZMrhNYKzucCtTPY2Nw", "UCB_qr75-ydFVKSF9Dmo6izg"]
 
-      url = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=#{@search_array[@i]}&publishedAfter=2018-11-10T00%3A00%3A00Z&type=video&videoEmbeddable=true&key=AIzaSyDBfjI6j1bm5ldQkUaUh_cZ0HNV-xWLyMg"
+    sport_search = params[:user]["sport_ids"]
+    @user_search = []
+    @find_sport = []
+
+    sport_search.each do |i|
+    if  i == "1"
+      @user_search << @search_array[1]
+      @find_sport << @find_array[1]
+    end
+      if  i == "2"
+        @user_search << @search_array[2]
+        @find_sport << @find_array[2]
+      end
+        if  i == "3"
+          @user_search << @search_array[3]
+          @find_sport << @find_array[3]
+        end
+          if  i == "4"
+            @user_search << @search_array[4]
+            @find_sport << @find_array[4]
+          end
+            if  i == "5"
+              @user_search << @search_array[5]
+              @find_sport << @find_array[5]
+            end
+
+  end
+
+      for @i in 0..@user_search.length-1 do
+
+      url = "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=#{@user_search[@i]}&publishedAfter=2018-11-10T00%3A00%3A00Z&type=video&videoEmbeddable=true&key=AIzaSyDBfjI6j1bm5ldQkUaUh_cZ0HNV-xWLyMg"
       uri = URI(url)
       response = Net::HTTP.get(uri)
 
@@ -26,13 +55,11 @@ module YoutubeHelper
       y_url = data["items"][i]["id"]["videoId"]
       db_entry = "https://youtube.com/watch?v=#{y_url}"
 
-      find_array = ["Football", "Tennis", "Rugby", "Golf", "Formula 1"]
-
-      sport_id = Sport.find_by(name: find_array[@i])
+      sport_id = Sport.find_by(name: @find_sport[@i])
 
       YouTube.create(user_id: session[:user_id], sports_id: sport_id.id ,video_url: db_entry)
-
     end
+
   end
 
 
