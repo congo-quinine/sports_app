@@ -1,1 +1,7 @@
-<h2> Select Your Media Feed</h2>
+<h2> Hello <%= @user.email %> </h2>
+
+<h2> Display Media Content for the User </h2>
+
+<% @user.sports.each do |i| %>
+<%= i.name %>
+<% end %>

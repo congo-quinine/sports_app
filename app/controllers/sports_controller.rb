@@ -5,7 +5,7 @@ class SportsController < ApplicationController
   end
 
   def sport_selection
-    @user = User.find_by_id(session[:current_user_id])
+      @user = User.find(session[:user_id])
   end
 
 
