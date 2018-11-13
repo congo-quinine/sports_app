@@ -1,0 +1,9 @@
+
+
+<h3> Hello </h3>
+
+ <%= form_for @new_user do |f| %>
+ <%= f.text_field :user_name  %>
+ <%= f.text_field :password_digest  %>
+ <%= f.submit %>
+ <% end %>
