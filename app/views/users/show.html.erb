@@ -2,6 +2,6 @@
 
 <h2> Display Media Content for the User </h2>
 
-<% @user.sports.each do |i| %>
+<% @user.sports.uniq.each do |i| %>
 <%= i.name %>
 <% end %>

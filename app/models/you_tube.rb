@@ -1,5 +1,5 @@
 class YouTube < ApplicationRecord
-  belongs_to :user
-  has_many :sports, through: :user_sports
-
+  has_many :user_sports
+  has_many :users, through: :user_sports
+  as_many :sports, through: :user_sports
 end

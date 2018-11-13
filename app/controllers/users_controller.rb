@@ -24,7 +24,6 @@ class UsersController < ApplicationController
       for i in 0..params[:user][:sport_ids].length
         @user.user_sports.create(user_id: @user.id, sport_id: params[:user][:sport_ids][i])
       end
-      search
       redirect_to @user
     end
 
