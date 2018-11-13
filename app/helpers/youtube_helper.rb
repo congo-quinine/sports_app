@@ -3,11 +3,10 @@ module YoutubeHelper
   require 'net/http'
   require 'json'
 
-  def you_tube_search(sports)
+  def you_tube_search
 
-    byebug
-
-      @search_array = ["UCYN6dfKAmlMBRd-thhEzsBg","UCbcxFkd6B9xUU54InHv4Tig", "UCLbW1klIl3T1XCp8hHYZGMw", "UCKwGZZMrhNYKzucCtTPY2Nw", "UCB_qr75-ydFVKSF9Dmo6izg"]
+# "UCbcxFkd6B9xUU54InHv4Tig", "UCLbW1klIl3T1XCp8hHYZGMw", "UCKwGZZMrhNYKzucCtTPY2Nw", "UCB_qr75-ydFVKSF9Dmo6izg"
+      @search_array = ["UCYN6dfKAmlMBRd-thhEzsBg"]
 
       for @i in 0..@search_array.length-1
 

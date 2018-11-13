@@ -5,3 +5,7 @@
 <% @user.sports.uniq.each do |i| %>
 <%= i.name %>
 <% end %>
+
+<% @user.you_tubes.each do |i| %>
+<%= i.video_url %>
+<% end %>

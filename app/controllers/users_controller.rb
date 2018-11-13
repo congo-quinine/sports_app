@@ -17,6 +17,7 @@ class UsersController < ApplicationController
         redirect_to "/sport_selection"
       end
 
+
     end
 
     def update
@@ -24,6 +25,7 @@ class UsersController < ApplicationController
       for i in 0..params[:user][:sport_ids].length
         @user.user_sports.create(user_id: @user.id, sport_id: params[:user][:sport_ids][i])
       end
+      you_tube_search
       redirect_to @user
     end
 
