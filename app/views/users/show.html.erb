@@ -6,6 +6,8 @@
 <%= i.name %>
 <% end %>
 
+<div>
 <% @user.you_tubes.each do |i| %>
-<%= i.video_url %>
+<iframe src=<%=i.video_url%>></iframe>
 <% end %>
+</div>

@@ -53,7 +53,7 @@ module YoutubeHelper
     for i in 0..4 do
 
       y_url = data["items"][i]["id"]["videoId"]
-      db_entry = "https://youtube.com/watch?v=#{y_url}"
+      db_entry = "https://youtube.com/embed?v=#{y_url}"
 
       sport_id = Sport.find_by(name: @find_sport[@i])
 
