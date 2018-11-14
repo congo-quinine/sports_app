@@ -23,33 +23,54 @@ body {
        font-family: 'Kanit', sans-serif;
  }
 
- .page_wrapper {
+ #home_page {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-top: 20%;
  }
 
- .container {
-  font-weight: bold;
-  color: #fff;
-  text-shadow:
-  -1px -1px 0 #00f,
-  1px -1px 0 #00f,
-  -1px 1px 0 #00f,
-  1px 1px 0 #00f;
-  letter-spacing: 2px;
+//  .page_wrapper {
+//     text-align: center;
+//     margin-top: 20%;
+//  }
 
+ .login_page {
+   font-size: 2rem;
+   font-weight: 400;
+   margin: 15% auto 0 auto;
+   color: #fff;
+   letter-spacing: 2px;
+   background-color: rgba(69, 79, 94, 0.5);
+   border-radius: 5px;
+   padding: 20px;
 }
 
-.login:hover
-{
-
-    text-shadow:
-    -1px -1px 0 #00f,
-    1px -1px 0 #00f,
-    -1px 1px 0 #00f,
-    1px 1px 0 #00f;
+.login_links > a {
+   display: block;
+   font-size: 1.5rem;
+   font-weight: 600;
+   margin-top: 1rem;
+   padding-top: 1rem;
+   color: #fff;
+   text-decoration: none;
+   transition: transform .3s;
+   &:hover {
+      cursor: pointer;
+      color: #bbbcc1;
+      text-shadow: 0 1.5rem 4rem;
+      transform: translateY(-0.8rem) scale(1.0);
+   }
 }
-<<<<<<< HEAD:app/assets/stylesheets/application.scss
+
+.login:hover {
+   //  text-shadow:
+   //  -1px -1px 0 #00f,
+   //  1px -1px 0 #00f,
+   //  -1px 1px 0 #00f,
+   //  1px 1px 0 #00f;
+}
+
+
  .user h2 {
      color: #fff;
      font-size: 3rem;
@@ -65,7 +86,7 @@ body {
 
  .user_content_name {
    display: flex;
-   justify-content: space-evenly;
+   justify-content: space-around;
    font-size: 1.5rem;
    padding-top: 1rem;
    text-align: center;
@@ -86,7 +107,7 @@ body {
  }
 
  .user_video iframe {
-    height: 25vh;
+    height: 30vh;
     width: 25vw;
     transition: transform .3s;
     border-radius: 5px;
@@ -97,7 +118,6 @@ body {
  }
 
    
-=======
 
 
 .intrinsic-container iframe {
@@ -122,4 +142,3 @@ body {
   1px 1px 0 #00f;
   letter-spacing: 2px;
 }
->>>>>>> master:app/assets/stylesheets/application.css
