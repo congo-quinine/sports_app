@@ -62,3 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'google-api-client', '>0.7'
+
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'

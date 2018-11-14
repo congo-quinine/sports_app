@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
+body{
+      background: url("https://images-na.ssl-images-amazon.com/images/I/91iuG5KYjOL._SL1500_.jpg") no-repeat fixed center;
+       background-size: 100% 100%;
+       font-family: 'Kanit', sans-serif;
+ }
+
+ .page_wrapper {
+    text-align: center;
+    margin-top: 20%;
+ }
+
+ .container{
+  font-weight: bold;
+  color: #fff;
+  text-shadow:
+  -1px -1px 0 #00f,
+  1px -1px 0 #00f,
+  -1px 1px 0 #00f,
+  1px 1px 0 #00f;
+  letter-spacing: 2px;
+
+}
+
+.login:hover
+{
+    color: #fff;
+    text-shadow:
+    -1px -1px 0 #00f,
+    1px -1px 0 #00f,
+    -1px 1px 0 #00f,
+    1px 1px 0 #00f;
+}
