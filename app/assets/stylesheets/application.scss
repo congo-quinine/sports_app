@@ -17,7 +17,7 @@
 
 
 
-body{
+body {
       background: url("https://images-na.ssl-images-amazon.com/images/I/91iuG5KYjOL._SL1500_.jpg") no-repeat fixed center;
        background-size: 100% 100%;
        font-family: 'Kanit', sans-serif;
@@ -28,7 +28,7 @@ body{
     margin-top: 20%;
  }
 
- .container{
+ .container {
   font-weight: bold;
   color: #fff;
   text-shadow:
@@ -49,20 +49,50 @@ body{
     -1px 1px 0 #00f,
     1px 1px 0 #00f;
 }
- .user {
-     color: blue,
-     font-size
+ .user h2 {
+     color: #fff;
+     font-size: 3rem;
+     font-weight: 400;
+     text-align: center;
+     padding-top: 3rem;
+ }
+
+ .user_content {
+   color: #fff;
+   text-align: center;
+ }
+
+ .user_content_name {
+   display: flex;
+   justify-content: space-evenly;
+   font-size: 1.5rem;
+   padding-top: 1rem;
+   text-align: center;
+   color: #fff;
+
  }
 
  .user_videos {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: flex-wrap;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center; 
  }
 
  .user_video {
     flex-direction: flex-wrap;
-    width: 50%;
-    height: 50%;
-    padding: 10px;
+    justify-content: center;
+    padding: 2rem;
  }
+
+ .user_video iframe {
+    height: 25vh;
+    width: 25vw;
+    transition: transform .3s;
+    border-radius: 5px;
+      &:hover {
+      transform: translateY(-1.2rem) scale(1.01);
+      }
+   box-shadow: 0 1.5rem 4rem;
+ }
+
+   

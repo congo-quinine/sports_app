@@ -4,21 +4,25 @@
 </div>
 
 <div class = 'user_content'>
-    <h2> Display Media Content for the User </h2>
+    <h2> Current Sports Selection</h2>
 </div>
 
 
-<div class= "user_content_name"></div>
+<div class= "user_content_name">
     <% @user.sports.uniq.each do |i| %>
-    <%= i.name %>
+    <div class = "user_content_sport_name">
+        <%= i.name %>
+    </div>
     <% end %>
 </div>
 
 
 <div class= "user_videos">
     <% @user.you_tubes.each do |i| %>
-    <div class= "user_video">
-        <iframe src=<%= i.video_url %></iframe>
+    <div class = "user_video">
+        <iframe src = <%= i.video_url %> >
+        </iframe>
+        <p>Your video</p>
     </div>
     <% end %>
 </div>

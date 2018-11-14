@@ -7,3 +7,5 @@ Sport.create(name: "Tennis")
 Sport.create(name: "Rugby")
 Sport.create(name: "Golf")
 Sport.create(name: "Formula 1")
+
+
