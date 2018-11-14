@@ -1,9 +1,18 @@
 
-<h2> <%= @user.email %> </h2>
 
-<h2> Select Media Content </h2>
 
-<%= form_for @user do |f| %>
-<%= f.collection_check_boxes(:sport_ids, Sport.all, :id, :name)  %>
-<%= f.submit "Confirm", class: "btn btn-primary" %>
-<% end %>
+
+
+
+<div class="page_wrapper">
+   <div class="page-style">
+     <h2> Hi,<%= @user.email %> </h2>
+
+       <h2> Please select the sports you'd like to follow </h2>
+
+       <%= form_for @user do |f| %>
+       <%= f.collection_check_boxes(:sport_ids, Sport.all, :id, :name)  %>
+       <%= f.submit "Confirm", class: "btn btn-primary" %>
+       <% end %>
+   </div>
+ </div>

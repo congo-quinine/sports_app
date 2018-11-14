@@ -42,13 +42,14 @@ body {
 
 .login:hover
 {
-    color: #fff;
+
     text-shadow:
     -1px -1px 0 #00f,
     1px -1px 0 #00f,
     -1px 1px 0 #00f,
     1px 1px 0 #00f;
 }
+<<<<<<< HEAD:app/assets/stylesheets/application.scss
  .user h2 {
      color: #fff;
      font-size: 3rem;
@@ -96,3 +97,29 @@ body {
  }
 
    
+=======
+
+
+.intrinsic-container iframe {
+  position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+.page-style{
+  font-weight: bold;
+  margin-left: 40%;
+  color: #fff;
+  text-shadow:
+  -1px -1px 0 #00f,
+  1px -1px 0 #00f,
+  -1px 1px 0 #00f,
+  1px 1px 0 #00f;
+  letter-spacing: 2px;
+}
+>>>>>>> master:app/assets/stylesheets/application.css
