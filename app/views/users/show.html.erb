@@ -1,11 +1,25 @@
-<h2> Hello <%= @user.email %> </h2>
 
-<h2> Display Media Content for the User </h2>
+<div class = 'user'>
+    <h2>Welcome <%= @user.email %> </h2>
+</div>
 
-<% @user.sports.uniq.each do |i| %>
-<%= i.name %>
-<% end %>
+<div class = 'user_content'>
+    <h2> Display Media Content for the User </h2>
+</div>
 
-<% @user.you_tubes.each do |i| %>
-<%= i.video_url %>
-<% end %>
+
+<div class= "user_content_name"></div>
+    <% @user.sports.uniq.each do |i| %>
+    <%= i.name %>
+    <% end %>
+</div>
+
+
+<div class= "user_videos">
+    <% @user.you_tubes.each do |i| %>
+    <div class= "user_video">
+        <iframe src=<%= i.video_url %></iframe>
+    </div>
+    <% end %>
+</div>
+

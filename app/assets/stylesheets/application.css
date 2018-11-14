@@ -49,3 +49,20 @@ body{
     -1px 1px 0 #00f,
     1px 1px 0 #00f;
 }
+ .user {
+     color: blue,
+     font-size
+ }
+
+ .user_videos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: flex-wrap;
+ }
+
+ .user_video {
+    flex-direction: flex-wrap;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+ }
