@@ -7,16 +7,16 @@ class UsersController < ApplicationController
 
     def create
       @user = User.create(user_params)
-      redirect_to '/login'
+      log_in @user
+      redirect_to @user
     end
 
     def show
       @user = User.find(session[:user_id])
-
       if @user.sports.length == 0
         redirect_to "/sport_selection"
       end
-
+      @news = news_search 
     end
 
     def update
