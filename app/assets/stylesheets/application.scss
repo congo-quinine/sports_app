@@ -121,9 +121,13 @@ body {
  }
 
  .user_videos {
+   padding-top: 1.6%;
+   margin-right: 3%;
+   max-width: 60%;
+   float: right;
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
+   justify-content: flex-end;
  }
 
  .user_video {
@@ -168,7 +172,19 @@ a{
   word-wrap: break-word;
 }
 
+#theNews.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 500px;
+}
 .news {
-  background-color: rgba(69, 79, 94, 0.8);
+  max-width: 30%;
+  margin-left: -7%;
+  background-color: rgba(69, 79, 94, 0.5);
+
+}
+.top{
+  position: sticky;
+
 
 }

@@ -35,15 +35,17 @@
 
 <br>
 
-<div id="theNews"class="news" style="color: white; background: #e6e6e6, opacity; margin-left: 10%; margin-right: 10%;">
-  <h2 style="text-align: center"> In the News Today</h2>
+<div class="top">
+<div id="theNews"class="news" style="color: white; background: #e6e6e6, opacity; margin-left: 6%; margin-right: 5%;">
+  <h3 class="top" style="text-align: center"> In the News Today</h3>
   <% for i in 0..4 do %>
     <div style="padding-left: 5%; padding-right: 5%;">
-      <h3 style="text-decoration: underline;"><%=  @news["articles"][i]["title"] %></h3>
+      <h4 style="text-decoration: underline;"><%=  @news["articles"][i]["title"] %></h4>
       <%=  @news["articles"][i]["description"] %>
       <a style="color: #3884ff;"href="<%= @news["articles"][i]["url"]%>" target="_blank">Full Story</a>
     </div>
     <br>
 <% end %>
 
+</div>
 </div>
