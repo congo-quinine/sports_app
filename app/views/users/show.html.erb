@@ -1,7 +1,8 @@
 
+    <p style="text-align: center; float: right; padding-right: 5%; "><%= link_to "Log out", logout_path, method: :delete %></p>
+
 <div class = 'user'>
     <h2>Welcome <%= @user.email %> </h2>
-    <p style="text-align: center;"><%= link_to "Log out", logout_path, method: :delete %></p>
     <p style="text-align: center; color: white" > Todays Date: <%= Date.today%> </p>
     <a style="text-align: center" href="#theNews"><p style="text-align: center;"> The News Today </p></a>
 </div>
