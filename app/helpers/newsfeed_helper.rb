@@ -6,9 +6,13 @@ require 'json'
 
   def news_search
 
+    @time = Date.today-3
+    @time = @time.strftime
+
+
     url = 'https://newsapi.org/v2/everything?'\
     'q=Sports&'\
-    'from=2018-11-11&'\
+    'from=2018-11-14&'\
     'sortBy=popularity&'\
     'apiKey=c1273f98993843b080243b854d2a61a6'
 
