@@ -1,25 +1,11 @@
-<div id="home_page" "class="">
-
-
-
-<div class="page_wrapper">
-
-  <div class="container">
-      <h3> The New Sportsman </h3>
-      <h4> Welcome to your personalised Sports streaming app </h4>
-  </div>
-
-  <div id="login" class="container">
-    <p> Please login below, or create a new account </p>
-      <div class="">
-        <%= link_to "Log in here", login_path %>
-      </div>
-      <div class="">
+<div id="home_page">
+  <div class="login_page">
+      <h1> The New Sportsman </h1>
+      <h2> Welcome to your personalised Sports streaming app </h2>
+      <p> Please login below or create a new account </p>
+      <div class = "login_links">
+        <%= link_to "Log in", login_path %>
         <%= link_to "Create Account", new_user_path %>
       </div>
   </div>
-
-</div>
-
-
 </div>
