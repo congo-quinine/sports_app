@@ -15,6 +15,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  end
+  log_out
+  redirect_to sports_path
+end
 
 end
