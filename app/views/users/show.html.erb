@@ -1,16 +1,22 @@
 
-    <p style="text-align: center; float: right; padding-right: 5%; "><%= link_to "Log out", logout_path, method: :delete %></p>
 
-<div class = 'user'>
-    <h2>Welcome <%= @user.email %> </h2>
-    <p style="text-align: center; color: white" > Todays Date: <%= Date.today%> </p>
-    <a style="text-align: center" href="#theNews"><p style="text-align: center;"> The News Today </p></a>
-</div>
+<nav class="navbar navbar-light bg-light sticky">
+  <a class="navbar-brand" href="#">
+    SportsHub
+  </a>
+
+      <span id="wel-head"style="padding: 10px 0% 0% 70%;">Welcome <%= @user.email %> -
+        <%= Date.today %>
+        <%= link_to "Log out", logout_path, method: :delete %>
+        </span>
+</nav>
 
 
+  <div id="time">
+  </div>
 
 <div class='user_content'>
-    <h1> Sports You're Following </h1>
+    <h1> SportsHub </h1>
     <span> <%= link_to "Update", "/update_sport"  %></span>
 </div>
 
@@ -18,7 +24,7 @@
 <div class="user_content_name">
     <% @user.sports.uniq.each do |i| %>
     <div class="user_content_sport_name">
-      <a href=#<%= i.id %>><%= i.name %></a>
+      <a style="font-size: 14px;" href=#<%= i.id %>><%= i.name %></a>
     </div>
     <% end %>
 </div>
@@ -35,10 +41,10 @@
 
 <br>
 
-<div class="top">
-<div id="theNews"class="news" style="color: white; background: #e6e6e6, opacity; margin-left: 6%; margin-right: 5%;">
-  <h3 class="top" style="text-align: center"> In the News Today</h3>
-  <% for i in 0..4 do %>
+
+<div id="theNews" class="news" style="color: white; background: #e6e6e6, opacity; margin-left: 6%; margin-right: 5%;">
+  <h3 style="text-align: center"> In the News Today</h3>
+  <% for i in 0..9 do %>
     <div style="padding-left: 5%; padding-right: 5%;">
       <h4 style="text-decoration: underline;"><%=  @news["articles"][i]["title"] %></h4>
       <%=  @news["articles"][i]["description"] %>
@@ -46,6 +52,4 @@
     </div>
     <br>
 <% end %>
-
-</div>
 </div>

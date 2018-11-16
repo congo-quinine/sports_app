@@ -23,10 +23,14 @@ body {
        font-family: 'Kanit', sans-serif;
  }
 
+
  #home_page {
     display: flex;
     justify-content: center;
     text-align: center;
+ }
+ .welcome-header{
+   color: #260C0C !important;
  }
 
 
@@ -111,14 +115,14 @@ body {
  }
 
  .user_content_name {
-   display: flex;
-   justify-content: space-around;
-   font-size: 1.5rem;
-   padding-top: 1rem;
-   text-align: center;
-   color: #fff;
-
- }
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 70%;
+    margin-left: 35%;
+  }
 
  .user_videos {
    padding-top: 1.6%;
@@ -134,8 +138,10 @@ body {
     flex-direction: flex-wrap;
     justify-content: center;
     padding: 2rem;
+    background-color: #f8f9fa;
     background-color: rgba(69, 79, 94, 0.5);
  }
+
 
  .user_video iframe {
     height: 30vh;
@@ -159,9 +165,9 @@ body {
     height: auto;
 }
 
-a{
-  color: white;
-}
+// a{
+//   color: white;
+// }
 
 .video-title{
   padding-top: 10%;
@@ -172,19 +178,8 @@ a{
   word-wrap: break-word;
 }
 
-#theNews.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 500px;
-}
 .news {
   max-width: 30%;
   margin-left: -7%;
   background-color: rgba(69, 79, 94, 0.5);
-
-}
-.top{
-  position: sticky;
-
-
 }

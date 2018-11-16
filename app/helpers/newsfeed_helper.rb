@@ -10,7 +10,7 @@ require 'json'
     @time = @time.strftime
 
 
-    url = 'https://newsapi.org/v2/top-headlines?sources=espn&apiKey=c1273f98993843b080243b854d2a61a6'
+    url = 'https://newsapi.org/v2/top-headlines?sources=bbc-sport&apiKey=c1273f98993843b080243b854d2a61a6'
 
     uri = URI(url)
     response = Net::HTTP.get(uri)
