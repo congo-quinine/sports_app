@@ -1,19 +1,85 @@
 
+<script type="text/javascript">
+
+  function checkTime(i) {
+    if (i < 10) {
+      i = "0" + i;
+    }
+    return i;
+  }
+
+  function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    $(`#time`).empty();
+    $(`#time`).append(h + ":" + m + ":" + s);
+    t = setTimeout(function() {
+      startTime()
+    }, 500);
+  }
+  startTime();
+
+  // $(`#counter`).empty();
+  // $(`#counter`).append(`<p>00</p>`)
+
+
+let weatherType;
+let weatherTemp = 0;
+
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function(position) {
+
+    $(document).ready(function(){
+
+  $.getJSON(`https://fcc-weather-api.glitch.me/api/current?&lon=${position.coords.longitude}&lat=${position.coords.latitude}`,function(wet) {
+
+    let weatherTemp = wet.main["temp"];
+    let weatherType = wet.weather[0].icon;
+    let location = wet.name;
+
+     $('#wet').html(`<span> Temperature is ${weatherTemp} Celsius - </span >`);
+
+     $('#wet2').prepend(`<img id="theImg" src=${weatherType} />`);
+
+     $('#wet3').html(`<span> ${location} - </span>`);
+  });
+
+  $('#getF').on("click", function(){
+
+  let newFar = (weatherTemp * 9/5) + 32;
+      $('#wet').html(`<span> Temperature is ${newFar} degrees Fahrenheit </span>`);
+  })
+});
+  });
+}
+
+
+
+
+
+</script>
+
 
 <nav class="navbar navbar-light bg-light sticky">
   <a class="navbar-brand" href="#">
     SportsHub
   </a>
 
-      <span id="wel-head"style="padding: 10px 0% 0% 70%;">Welcome <%= @user.email %> -
+      <span id="wel-head"style="padding: 10px 0% 0% 40%;">Welcome <%= @user.email %> -
+        <span id="wet3"></span>
+        <span id="wet"></span>
         <%= Date.today %>
+        <span id="time"></span>
         <%= link_to "Log out", logout_path, method: :delete %>
         </span>
 </nav>
 
 
-  <div id="time">
-  </div>
 
 <div class='user_content'>
     <h1> SportsHub </h1>
@@ -46,7 +112,7 @@
   <h3 style="text-align: center"> In the News Today</h3>
   <% for i in 0..9 do %>
     <div style="padding-left: 5%; padding-right: 5%;">
-      <h4 style="text-decoration: underline;"><%=  @news["articles"][i]["title"] %></h4>
+      <h6 style="text-decoration: underline;"><%=  @news["articles"][i]["title"] %></h6>
       <%=  @news["articles"][i]["description"] %>
       <a style="color: #3884ff;"href="<%= @news["articles"][i]["url"]%>" target="_blank">Full Story</a>
     </div>

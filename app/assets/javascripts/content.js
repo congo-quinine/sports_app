@@ -1,3 +1,5 @@
+const time = document.getElementById('time')
+
 function checkTime(i) {
   if (i < 10) {
     i = "0" + i;
@@ -13,7 +15,7 @@ function startTime() {
   // add a zero in front of numbers<10
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+  time.innerHTML = h + ":" + m + ":" + s;
   t = setTimeout(function() {
     startTime()
   }, 500);
