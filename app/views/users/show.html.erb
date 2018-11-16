@@ -24,10 +24,6 @@
   }
   startTime();
 
-  // $(`#counter`).empty();
-  // $(`#counter`).append(`<p>00</p>`)
-
-
 let weatherType;
 let weatherTemp = 0;
 
@@ -43,25 +39,17 @@ let weatherTemp = 0;
     let location = wet.name;
 
      $('#wet').html(`<span> Temperature is ${weatherTemp} Celsius - </span >`);
-
      $('#wet2').prepend(`<img id="theImg" src=${weatherType} />`);
-
      $('#wet3').html(`<span> ${location} - </span>`);
   });
 
   $('#getF').on("click", function(){
-
-  let newFar = (weatherTemp * 9/5) + 32;
+    let newFar = (weatherTemp * 9/5) + 32;
       $('#wet').html(`<span> Temperature is ${newFar} degrees Fahrenheit </span>`);
   })
 });
   });
 }
-
-
-
-
-
 </script>
 
 
